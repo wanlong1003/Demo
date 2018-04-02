@@ -17,6 +17,8 @@ namespace Asynchronous05
         {
             //定义一个取消任务的操作对象
             var cts = new CancellationTokenSource();
+            //任务在30s后结束
+            cts.CancelAfter(30000);
             Begin(cts);
             Console.WriteLine("任务已启动");
             while (true)
