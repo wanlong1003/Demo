@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchronous03", "Asynchron
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchronous04", "Asynchronous04\Asynchronous04.csproj", "{01B697E2-F207-48B3-806B-DD1E9510EE46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynchronous05", "Asynchronous05\Asynchronous05.csproj", "{1E0A1138-AFFE-4537-A85B-B947B19FE3B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{01B697E2-F207-48B3-806B-DD1E9510EE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01B697E2-F207-48B3-806B-DD1E9510EE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01B697E2-F207-48B3-806B-DD1E9510EE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0A1138-AFFE-4537-A85B-B947B19FE3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0A1138-AFFE-4537-A85B-B947B19FE3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0A1138-AFFE-4537-A85B-B947B19FE3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0A1138-AFFE-4537-A85B-B947B19FE3B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{00D33BBB-BC8B-4F6A-AB94-847D81B02F7D} = {E1892F1F-CA38-4452-B359-C7703AC128C0}
 		{85847D7C-A15E-406B-BF03-8DE3E80D1738} = {E1892F1F-CA38-4452-B359-C7703AC128C0}
 		{01B697E2-F207-48B3-806B-DD1E9510EE46} = {E1892F1F-CA38-4452-B359-C7703AC128C0}
+		{1E0A1138-AFFE-4537-A85B-B947B19FE3B1} = {E1892F1F-CA38-4452-B359-C7703AC128C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39016DB1-301F-46D8-9F26-AD8677D5F068}
