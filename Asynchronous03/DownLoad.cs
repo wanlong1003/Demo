@@ -10,6 +10,7 @@ namespace Asynchronous03
     class DownLoad
     {
         static int percentage = 0;
+        static object locker = new object();
         public static async Task<int> DownLoad01(string url)
         {
             using (var client = new WebClient())
@@ -17,12 +18,14 @@ namespace Asynchronous03
                 //添加下载进度
                 client.DownloadProgressChanged += (sender, e) =>
                 {
-                    if (percentage < e.ProgressPercentage)
+                    lock (locker)
                     {
-                        Console.WriteLine($"[{DateTime.Now.ToString()}] {e.BytesReceived/1024}kB/{e.TotalBytesToReceive/1024}kB : {e.ProgressPercentage}%");
-                        percentage = e.ProgressPercentage;
+                        if (percentage < e.ProgressPercentage)
+                        {
+                            Console.WriteLine($"[{DateTime.Now.ToString()}] {e.BytesReceived / 1024}kB/{e.TotalBytesToReceive / 1024}kB : {e.ProgressPercentage}%");
+                            percentage = e.ProgressPercentage;
+                        }
                     }
-
                 };
                 //第一种异步下载方式
                 var buffer = await client.DownloadDataTaskAsync(url);

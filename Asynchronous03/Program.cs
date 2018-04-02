@@ -11,8 +11,13 @@ namespace Asynchronous03
     {
         static void Main(string[] args)
         {
-            var t1 = DownLoad.DownLoad01("https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.21-winx64.zip");
-            var t2 = DownLoad.DownLoad02("https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.21-winx64.zip");
+            var t1 = DownLoad.DownLoad01("https://dldir1.qq.com/qqfile/qq/TIM2.1.5/23141/TIM2.1.5.exe");
+            //表示t1异步完成后的回调方法
+            t1.ContinueWith(t => Console.WriteLine("t1 Complated:"+t.Result));
+
+            var t2 = DownLoad.DownLoad02("https://dldir1.qq.com/qqfile/qq/TIM2.1.5/23141/TIM2.1.5.exe");
+            t2.ContinueWith(t => Console.WriteLine(t.Result));
+
             Console.WriteLine("开始下载" + DateTime.Now.ToString());
             Task.WaitAll(t1, t2);
             Console.WriteLine("下载完成，t1="+t1.Result +",t2="+t2.Result +"; " +DateTime.Now.ToString());
